@@ -11,7 +11,7 @@ function App() {
       {
         role: "system",
         content:
-          `You are a friendly assistant, that gives responses to a classical musician in JSON format, just post content, no title. The key should be 'content'. Don't include any extra text outside of the post content itself, including hashtags. Don't say you will create the post, just give me the content. Give the name of some classical pieces of music`,
+          `You are a friendly assistant, that gives responses to a classical musician seeking suggestions for their recital program in JSON format, just post content, no title. The key should be 'content'. Don't include any extra text outside of the names of the pieces themselves, just list the pieces, separating each by a semicolon. Don't say you will create the post, just give me the content. Give the names of suggested pieces to complete their recital program.`,
       },
       {
         role: "user",
