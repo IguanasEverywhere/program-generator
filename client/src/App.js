@@ -1,6 +1,7 @@
 import styles from './App.module.css';
 import { getResponseContent } from "./utils/openAICall";
 import { useState } from 'react';
+import InputForm from './components/InputForm/InputForm';
 
 function App() {
 
@@ -29,14 +30,17 @@ function App() {
       responseObj = JSON.parse(r.content);
       setProgramSuggestions(responseObj.content)
     });
-
   }
 
   return (
     <>
-      <h1>Program Generator</h1>
+      <h1>What Should I Play?</h1>
+      <div>
+        <InputForm />
+      </div>
       <button onClick={handleGenerateClick}>Generate Program</button>
       <p>{programSuggestions}</p>
+
     </>
   );
 }
